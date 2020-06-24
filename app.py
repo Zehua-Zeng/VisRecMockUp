@@ -12,6 +12,9 @@ df = pd.read_json('./web/static/data/movies.json')
 base = Chart(df)
 all_fields = base.get_fields()
 
+read_vlsf = open('vegalite_selected_fields.json', 'r')
+vlsf = json.load(read_vlsf)
+
 read_bfs = open('temp_results_v2.json', 'r')
 breadth_first_result = json.load(read_bfs)
 
@@ -64,21 +67,13 @@ def send_css(filename):
 def js2pyFieldsv1():
     receivedData = json.loads(request.form.get('data'))
     fields = receivedData["fields"]
-    # print (fields)
-    vegaliteDict = {}
-    if len(fields) == 1:
-        chart = base.field(fields[0])
-        vegaliteDict = chart._get_vegalite()
-    if len(fields) == 2:
-        chart = base.field(fields[0], fields[1])
-        vegaliteDict = chart._get_vegalite()
-    if len(fields) == 3:
-        chart = base.field(fields[0], fields[1], fields[2])
-        vegaliteDict = chart._get_vegalite()
-    vegaliteStr = json.dumps(vegaliteDict)
-    vegaliteStr = vegaliteStr.replace('cars', 'movies')
-    vegaliteStr = vegaliteStr.replace(', "scale": {"zero": true}', '')
-    vegaliteDictFinal = json.loads(vegaliteStr)
+    fields.sort()
+    fields_str = "+".join(fields)
+    vegaliteDictFinal = {}
+    if not vlsf[fields_str]:
+        return jsonify(status="empty", actualVegaLite=vegaliteDictFinal)
+    vlstr = vl2vlStr(vlsf[fields_str])
+    vegaliteDictFinal[vlstr] = vlsf[fields_str]
     return jsonify(status="success", actualVegaLite=vegaliteDictFinal)
 
 @app.route('/js2pyFieldsv2', methods=['POST'])
@@ -150,6 +145,33 @@ def js2pyFieldsv3():
         vgl = vgl.replace(', "scale": {"zero": true}', '')
         vegaliteRankedFinal.append(json.loads(vgl))
     return jsonify(status="success", actualVegaLite=vegaliteDictFinal, recVegaLite=vegaliteRankedFinal)
+
+def vl2vlStr(chart_vegalite):
+    vegalite_str = ""
+    vegalite_str += "mark:" + chart_vegalite["mark"] + ';'
+    encoding_arr = []
+    for encoding in chart_vegalite["encoding"]:
+        if encoding == "undefined":
+            continue
+        encoding_str = ""
+        if "field" in chart_vegalite["encoding"][encoding]:
+            encoding_str += chart_vegalite["encoding"][encoding]["field"] + "-"
+        else:
+            encoding_str += "-"
+        encoding_str += chart_vegalite["encoding"][encoding]["type"] + "-"
+        encoding_str += encoding
+        if "aggregate" in chart_vegalite["encoding"][encoding]:
+            encoding_str += "<" + "aggregate" + ">" + chart_vegalite["encoding"][encoding]["aggregate"]
+        if "bin" in chart_vegalite["encoding"][encoding]:
+            encoding_str += "<" + "bin" + ">"
+        
+        encoding_arr.append(encoding_str)
+    
+    encoding_arr.sort()
+    vegalite_str += "encoding:" + ",".join(encoding_arr)
+
+    return vegalite_str
+
 
 
 if __name__ == '__main__':

@@ -30,17 +30,17 @@ body {
 }
 
 .explore {
-    background-color: rgb(238, 233, 247);
-    border-radius: 2px;
-    padding: 0 3px 2px 3px;
-    display: inline;
-    align-content: space-around;
-    margin: 0 0 2px 5px;
+  background-color: rgb(238, 233, 247);
+  border-radius: 2px;
+  padding: 0 3px 2px 3px;
+  display: inline;
+  align-content: space-around;
+  margin: 0 0 2px 5px;
 }
 
 .explore:hover {
-    box-shadow: 0 0 2px rgba(76, 2, 126, 0.212);
-    background-color: rgb(228, 212, 255);
+  box-shadow: 0 0 2px rgba(76, 2, 126, 0.212);
+  background-color: rgb(228, 212, 255);
 }
 
 #bookmark {
@@ -149,11 +149,11 @@ body {
 }
 
 #sidebar1 li {
-    background-color: rgba(164, 152, 201, 0.644);
-    padding: 3px 10px 3px 28px;
-    cursor: grab;
-    margin: 5px 0;
-    border-radius: 3px;
+  background-color: rgba(164, 152, 201, 0.644);
+  padding: 3px 10px 3px 28px;
+  cursor: grab;
+  margin: 5px 0;
+  border-radius: 3px;
 }
 
 #sidebar1 .disabled input {
@@ -269,7 +269,7 @@ h5 {
 }
 
 .add_bm:hover {
-  color: rgb(163, 149, 189);
+  color: rgb(255, 165, 0);
 }
 
 /* =============== scroll bar ============== */
@@ -298,50 +298,50 @@ h5 {
 /* ============================= !!! Styling for the index page !!! ===================================== */
 
 #index {
-    /* display: block; */
-    /* background-color: darkblue; */
-    width: fit-content;
-    margin: 5vh auto;
-    font-size: 20px;
-    color: rgb(82, 63, 148);
+  /* display: block; */
+  /* background-color: darkblue; */
+  width: fit-content;
+  margin: 5vh auto;
+  font-size: 20px;
+  color: rgb(82, 63, 148);
 }
 
 #index h1 {
-    position: static;
-    color: rgb(82, 63, 148);
-    /* left: 26%; */
+  position: static;
+  color: rgb(82, 63, 148);
+  /* left: 26%; */
 }
 
 #index ul {
-    color: purple;
-    list-style-type: none;
+  color: purple;
+  list-style-type: none;
 }
 
 #index li {
-    padding: 5px;
+  padding: 5px;
 }
 
 #index a:hover {
-    color: purple;
+  color: purple;
 }
 
 #index a {
-    color: rgb(38, 0, 128);
+  color: rgb(38, 0, 128);
 }
 
 .back_to_index {
-    float: left !important;
-    padding-left: 60vw !important;
+  float: left !important;
+  padding-left: 60vw !important;
 }
 
 .back_to_index a {
-    color: rgb(52, 31, 172) !important;
-    font-weight: bold;
-    background-color: rgb(187, 195, 241);
-    padding: 12px !important;
-    border-radius: 5px;
+  color: rgb(52, 31, 172) !important;
+  font-weight: bold;
+  background-color: rgb(187, 195, 241);
+  padding: 12px !important;
+  border-radius: 5px;
 }
 
 .back_to_index a:hover {
-    background-color: rgb(170, 179, 231);
+  background-color: rgb(170, 179, 231);
 }

@@ -27,19 +27,20 @@
     "data": {
       "url": "data/movies.json"
     },
-    "mark": "point",
+    "mark": "bar",
     "encoding": {
       "x": {
-        "type": "nominal",
-        "field": "Creative_Type"
+        "type": "quantitative",
+        "aggregate": "count"
       },
       "y": {
         "type": "nominal",
-        "field": "Title"
+        "field": "Creative_Type"
       },
-      "size": {
+      "color": {
         "type": "quantitative",
-        "field": "Worldwide_Gross"
+        "field": "Worldwide_Gross",
+        "aggregate": "mean"
       }
     }
       };

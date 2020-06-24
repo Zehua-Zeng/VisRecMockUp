@@ -14,7 +14,7 @@ var Fields = {
         "IMDB_Rating",
         "IMDB_Votes",
         "Production_Budget",
-        "Rotten_Tomatoes",
+        "Rotten_Tomatoes_Rating",
         "Running_Time_min",
         "US_DVD_Sales",
         "US_Gross",
