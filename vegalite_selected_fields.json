@@ -281,7 +281,27 @@
       }
     }
   },
-  "Director+Release_Date+US_DVD_Sales": {},
+  "Director+Release_Date+US_DVD_Sales": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "US_DVD_Sales"
+      }
+    }
+  },
   "Director+Rotten_Tomatoes_Rating+US_DVD_Sales": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -596,7 +616,27 @@
       }
     }
   },
-  "Director+Title+US_Gross": {},
+  "Director+Title+US_Gross": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "US_Gross"
+      }
+    }
+  },
   "Creative_Type+Release_Date": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -678,7 +718,27 @@
       }
     }
   },
-  "Release_Date+Title+US_Gross": {},
+  "Release_Date+Title+US_Gross": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "US_Gross"
+      }
+    }
+  },
   "Director+US_DVD_Sales": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -717,9 +777,73 @@
       }
     }
   },
-  "Production_Budget+Release_Date+Title": {},
-  "Distributor+Title+Worldwide_Gross": {},
-  "Director+Major_Genre+Release_Date": {},
+  "Production_Budget+Release_Date+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "field": "Production_Budget"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
+  "Distributor+Title+Worldwide_Gross": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Worldwide_Gross"
+      }
+    }
+  },
+  "Director+Major_Genre+Release_Date": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "color": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Major_Genre"
+      },
+      "size": {
+        "type": "ordinal",
+        "field": "Release_Date"
+      }
+    }
+  },
   "IMDB_Rating+IMDB_Votes+Rotten_Tomatoes_Rating": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -741,8 +865,54 @@
       }
     }
   },
-  "Director+Source+Title": {},
-  "Distributor+IMDB_Rating+US_DVD_Sales": {},
+  "Director+Source+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "Source"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
+  "Distributor+IMDB_Rating+US_DVD_Sales": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "IMDB_Rating",
+        "aggregate": "mean"
+      },
+      "x": {
+        "type": "quantitative",
+        "field": "US_DVD_Sales",
+        "bin": true
+      }
+    }
+  },
   "Creative_Type+Production_Budget+US_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -824,7 +994,27 @@
       }
     }
   },
-  "Release_Date+Title+US_DVD_Sales": {},
+  "Release_Date+Title+US_DVD_Sales": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "US_DVD_Sales"
+      }
+    }
+  },
   "MPAA_Rating+Production_Budget+Running_Time_min": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -1164,7 +1354,27 @@
       }
     }
   },
-  "Director+IMDB_Rating+Release_Date": {},
+  "Director+IMDB_Rating+Release_Date": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "IMDB_Rating"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      }
+    }
+  },
   "Distributor+IMDB_Votes+US_DVD_Sales": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -1233,7 +1443,27 @@
       }
     }
   },
-  "Distributor+IMDB_Rating+Title": {},
+  "Distributor+IMDB_Rating+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "IMDB_Rating"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "MPAA_Rating+Title+US_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -1255,7 +1485,29 @@
       }
     }
   },
-  "Distributor+US_DVD_Sales+US_Gross": {},
+  "Distributor+US_DVD_Sales+US_Gross": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "x": {
+        "type": "quantitative",
+        "field": "US_DVD_Sales",
+        "bin": true
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "US_Gross",
+        "aggregate": "mean"
+      }
+    }
+  },
   "IMDB_Votes+US_DVD_Sales": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -1845,7 +2097,27 @@
       }
     }
   },
-  "Director+Production_Budget+Release_Date": {},
+  "Director+Production_Budget+Release_Date": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Production_Budget"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      }
+    }
+  },
   "Distributor+Rotten_Tomatoes_Rating+US_DVD_Sales": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -1869,7 +2141,27 @@
       }
     }
   },
-  "Director+Distributor+Rotten_Tomatoes_Rating": {},
+  "Director+Distributor+Rotten_Tomatoes_Rating": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Rotten_Tomatoes_Rating"
+      }
+    }
+  },
   "Production_Budget+Running_Time_min+US_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -2079,7 +2371,29 @@
       }
     }
   },
-  "Distributor+IMDB_Rating+Worldwide_Gross": {},
+  "Distributor+IMDB_Rating+Worldwide_Gross": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "x": {
+        "type": "quantitative",
+        "field": "IMDB_Rating",
+        "bin": true
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Worldwide_Gross",
+        "aggregate": "mean"
+      }
+    }
+  },
   "MPAA_Rating+Running_Time_min+Title": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -2166,7 +2480,27 @@
       }
     }
   },
-  "Director+Rotten_Tomatoes_Rating+Title": {},
+  "Director+Rotten_Tomatoes_Rating+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Rotten_Tomatoes_Rating"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "Director+Production_Budget": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -2289,8 +2623,50 @@
       }
     }
   },
-  "Major_Genre+Rotten_Tomatoes_Rating+Worldwide_Gross": {},
-  "Distributor+Release_Date+US_Gross": {},
+  "Major_Genre+Rotten_Tomatoes_Rating+Worldwide_Gross": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Major_Genre"
+      },
+      "x": {
+        "type": "quantitative",
+        "field": "Rotten_Tomatoes_Rating",
+        "bin": true
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Worldwide_Gross",
+        "aggregate": "mean"
+      }
+    }
+  },
+  "Distributor+Release_Date+US_Gross": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "US_Gross"
+      }
+    }
+  },
   "MPAA_Rating+Running_Time_min+US_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -2354,7 +2730,31 @@
       }
     }
   },
-  "Major_Genre+Source+Title": {},
+  "Major_Genre+Source+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Major_Genre"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "Source"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "Rotten_Tomatoes_Rating+Source+Worldwide_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -2378,7 +2778,27 @@
       }
     }
   },
-  "Release_Date+Title+Worldwide_Gross": {},
+  "Release_Date+Title+Worldwide_Gross": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Worldwide_Gross"
+      }
+    }
+  },
   "Production_Budget+Title": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -2535,7 +2955,27 @@
       }
     }
   },
-  "Director+Title+US_DVD_Sales": {},
+  "Director+Title+US_DVD_Sales": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "US_DVD_Sales"
+      }
+    }
+  },
   "IMDB_Rating+IMDB_Votes+Source": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -2690,7 +3130,29 @@
       }
     }
   },
-  "Major_Genre+Production_Budget+US_Gross": {},
+  "Major_Genre+Production_Budget+US_Gross": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Major_Genre"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Production_Budget",
+        "aggregate": "mean"
+      },
+      "x": {
+        "type": "quantitative",
+        "field": "US_Gross",
+        "bin": true
+      }
+    }
+  },
   "Creative_Type+IMDB_Votes+MPAA_Rating": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -3081,7 +3543,31 @@
       }
     }
   },
-  "Director+Release_Date+Title": {},
+  "Director+Release_Date+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "color": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "size": {
+        "type": "ordinal",
+        "field": "Release_Date"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "Director+Major_Genre+Rotten_Tomatoes_Rating": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -3208,7 +3694,31 @@
       }
     }
   },
-  "Director+Distributor+Major_Genre": {},
+  "Director+Distributor+Major_Genre": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "Major_Genre"
+      }
+    }
+  },
   "Creative_Type+MPAA_Rating": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -3380,7 +3890,29 @@
       }
     }
   },
-  "Distributor+IMDB_Rating+Running_Time_min": {},
+  "Distributor+IMDB_Rating+Running_Time_min": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "IMDB_Rating",
+        "aggregate": "mean"
+      },
+      "x": {
+        "type": "quantitative",
+        "field": "Running_Time_min",
+        "bin": true
+      }
+    }
+  },
   "IMDB_Votes+MPAA_Rating+Source": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -3597,8 +4129,52 @@
       }
     }
   },
-  "Distributor+IMDB_Votes+Title": {},
-  "Distributor+Source+Title": {},
+  "Distributor+IMDB_Votes+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "IMDB_Votes"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
+  "Distributor+Source+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "Source"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "Creative_Type+Production_Budget+Source": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -3641,7 +4217,27 @@
       }
     }
   },
-  "Distributor+Running_Time_min+Title": {},
+  "Distributor+Running_Time_min+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Running_Time_min"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "Creative_Type+Source+Worldwide_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -3748,7 +4344,27 @@
       }
     }
   },
-  "Director+Running_Time_min+Title": {},
+  "Director+Running_Time_min+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Running_Time_min"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "Distributor+Major_Genre+US_DVD_Sales": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -3771,7 +4387,31 @@
       }
     }
   },
-  "Creative_Type+Distributor+Title": {},
+  "Creative_Type+Distributor+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "Creative_Type"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "Director+IMDB_Rating+US_DVD_Sales": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -3893,7 +4533,27 @@
       }
     }
   },
-  "Director+Production_Budget+Title": {},
+  "Director+Production_Budget+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Production_Budget"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "IMDB_Votes+Running_Time_min+Worldwide_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -3938,7 +4598,27 @@
       }
     }
   },
-  "IMDB_Votes+Release_Date+Title": {},
+  "IMDB_Votes+Release_Date+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "field": "IMDB_Votes"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "Release_Date+Worldwide_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -3979,7 +4659,27 @@
       }
     }
   },
-  "Distributor+Rotten_Tomatoes_Rating+Title": {},
+  "Distributor+Rotten_Tomatoes_Rating+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Rotten_Tomatoes_Rating"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "IMDB_Votes+Running_Time_min+Source": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -4094,7 +4794,27 @@
       }
     }
   },
-  "Director+Distributor+IMDB_Votes": {},
+  "Director+Distributor+IMDB_Votes": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "IMDB_Votes"
+      }
+    }
+  },
   "Director+IMDB_Votes+Running_Time_min": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -4134,7 +4854,31 @@
       }
     }
   },
-  "Distributor+Release_Date+Title": {},
+  "Distributor+Release_Date+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "color": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "ordinal",
+        "field": "Release_Date"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "IMDB_Votes+Rotten_Tomatoes_Rating+US_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -4348,7 +5092,31 @@
       }
     }
   },
-  "Distributor+Release_Date+Source": {},
+  "Distributor+Release_Date+Source": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "color": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "ordinal",
+        "field": "Release_Date"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Source"
+      }
+    }
+  },
   "Distributor+Worldwide_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -4486,7 +5254,27 @@
       }
     }
   },
-  "Distributor+Production_Budget+Release_Date": {},
+  "Distributor+Production_Budget+Release_Date": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Production_Budget"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      }
+    }
+  },
   "Distributor+Running_Time_min+US_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -4510,8 +5298,56 @@
       }
     }
   },
-  "Creative_Type+Distributor+Major_Genre": {},
-  "Director+Release_Date+Source": {},
+  "Creative_Type+Distributor+Major_Genre": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Creative_Type"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "Major_Genre"
+      }
+    }
+  },
+  "Director+Release_Date+Source": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "color": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "size": {
+        "type": "ordinal",
+        "field": "Release_Date"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Source"
+      }
+    }
+  },
   "Distributor+Rotten_Tomatoes_Rating+Source": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -4533,7 +5369,27 @@
       }
     }
   },
-  "Distributor+Release_Date+Worldwide_Gross": {},
+  "Distributor+Release_Date+Worldwide_Gross": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Worldwide_Gross"
+      }
+    }
+  },
   "IMDB_Rating+Major_Genre+US_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -4700,7 +5556,29 @@
       }
     }
   },
-  "Major_Genre+Production_Budget+Rotten_Tomatoes_Rating": {},
+  "Major_Genre+Production_Budget+Rotten_Tomatoes_Rating": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Major_Genre"
+      },
+      "x": {
+        "type": "quantitative",
+        "field": "Production_Budget",
+        "bin": true
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Rotten_Tomatoes_Rating",
+        "aggregate": "mean"
+      }
+    }
+  },
   "Rotten_Tomatoes_Rating": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -4952,7 +5830,27 @@
       }
     }
   },
-  "Director+Release_Date": {},
+  "Director+Release_Date": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      }
+    }
+  },
   "Release_Date+US_Gross+Worldwide_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -5013,8 +5911,52 @@
       }
     }
   },
-  "Distributor+Title": {},
-  "Director+MPAA_Rating+Title": {},
+  "Distributor+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
+  "Director+MPAA_Rating+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "MPAA_Rating"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "Creative_Type+IMDB_Votes+Worldwide_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -5137,7 +6079,31 @@
       }
     }
   },
-  "Creative_Type+MPAA_Rating+Source": {},
+  "Creative_Type+MPAA_Rating+Source": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Creative_Type"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "MPAA_Rating"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "Source"
+      }
+    }
+  },
   "Director+US_DVD_Sales+Worldwide_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -5240,7 +6206,29 @@
       }
     }
   },
-  "Distributor+Production_Budget+US_Gross": {},
+  "Distributor+Production_Budget+US_Gross": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "x": {
+        "type": "quantitative",
+        "field": "Production_Budget",
+        "bin": true
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "US_Gross",
+        "aggregate": "mean"
+      }
+    }
+  },
   "Director+Running_Time_min+US_DVD_Sales": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -5349,7 +6337,27 @@
       }
     }
   },
-  "Distributor+IMDB_Rating+Release_Date": {},
+  "Distributor+IMDB_Rating+Release_Date": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "IMDB_Rating"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      }
+    }
+  },
   "Creative_Type+Release_Date+US_DVD_Sales": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -5748,7 +6756,27 @@
       }
     }
   },
-  "Release_Date+Running_Time_min+Title": {},
+  "Release_Date+Running_Time_min+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Running_Time_min"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "Running_Time_min+Title+US_DVD_Sales": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -5793,7 +6821,27 @@
       }
     }
   },
-  "Director+IMDB_Rating+Title": {},
+  "Director+IMDB_Rating+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "IMDB_Rating"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "IMDB_Votes+Running_Time_min": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -5876,7 +6924,29 @@
       }
     }
   },
-  "Distributor+IMDB_Rating+IMDB_Votes": {},
+  "Distributor+IMDB_Rating+IMDB_Votes": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "IMDB_Rating",
+        "aggregate": "mean"
+      },
+      "x": {
+        "type": "quantitative",
+        "field": "IMDB_Votes",
+        "bin": true
+      }
+    }
+  },
   "IMDB_Votes+Major_Genre+Running_Time_min": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -5900,7 +6970,27 @@
       }
     }
   },
-  "Release_Date+Rotten_Tomatoes_Rating+Title": {},
+  "Release_Date+Rotten_Tomatoes_Rating+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Rotten_Tomatoes_Rating"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "Creative_Type+Distributor+IMDB_Rating": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -6029,7 +7119,31 @@
       }
     }
   },
-  "Director+Distributor+MPAA_Rating": {},
+  "Director+Distributor+MPAA_Rating": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "MPAA_Rating"
+      }
+    }
+  },
   "Running_Time_min+Source+US_DVD_Sales": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -6203,8 +7317,50 @@
       }
     }
   },
-  "IMDB_Rating+Release_Date+Title": {},
-  "Major_Genre+Production_Budget+US_DVD_Sales": {},
+  "IMDB_Rating+Release_Date+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "field": "IMDB_Rating"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
+  "Major_Genre+Production_Budget+US_DVD_Sales": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Major_Genre"
+      },
+      "x": {
+        "type": "quantitative",
+        "field": "Production_Budget",
+        "bin": true
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "US_DVD_Sales",
+        "aggregate": "mean"
+      }
+    }
+  },
   "Major_Genre+Running_Time_min+Source": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -6406,7 +7562,27 @@
       }
     }
   },
-  "Director+IMDB_Votes+Title": {},
+  "Director+IMDB_Votes+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "IMDB_Votes"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "Distributor+MPAA_Rating+Production_Budget": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -6470,7 +7646,27 @@
       }
     }
   },
-  "Director+Distributor": {},
+  "Director+Distributor": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      }
+    }
+  },
   "Major_Genre+Release_Date+US_DVD_Sales": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -6580,8 +7776,52 @@
       }
     }
   },
-  "Distributor+Production_Budget+Title": {},
-  "Director+Major_Genre+Title": {},
+  "Distributor+Production_Budget+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Production_Budget"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
+  "Director+Major_Genre+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "Major_Genre"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "IMDB_Rating+Worldwide_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -6685,7 +7925,31 @@
       }
     }
   },
-  "Creative_Type+Distributor+MPAA_Rating": {},
+  "Creative_Type+Distributor+MPAA_Rating": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Creative_Type"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "MPAA_Rating"
+      }
+    }
+  },
   "Creative_Type+MPAA_Rating+Running_Time_min": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -6829,7 +8093,27 @@
       }
     }
   },
-  "Director+IMDB_Votes+Release_Date": {},
+  "Director+IMDB_Votes+Release_Date": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "IMDB_Votes"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      }
+    }
+  },
   "Creative_Type+IMDB_Rating+Source": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -6910,7 +8194,31 @@
       }
     }
   },
-  "Creative_Type+Director+Release_Date": {},
+  "Creative_Type+Director+Release_Date": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "color": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Creative_Type"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "size": {
+        "type": "ordinal",
+        "field": "Release_Date"
+      }
+    }
+  },
   "Production_Budget+Source+US_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -7325,7 +8633,27 @@
       }
     }
   },
-  "Director+Title+Worldwide_Gross": {},
+  "Director+Title+Worldwide_Gross": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Worldwide_Gross"
+      }
+    }
+  },
   "Source": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -7383,7 +8711,31 @@
       }
     }
   },
-  "Director+MPAA_Rating+Release_Date": {},
+  "Director+MPAA_Rating+Release_Date": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "color": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "MPAA_Rating"
+      },
+      "size": {
+        "type": "ordinal",
+        "field": "Release_Date"
+      }
+    }
+  },
   "Release_Date+Running_Time_min+Source": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -7426,7 +8778,31 @@
       }
     }
   },
-  "Distributor+Major_Genre+Source": {},
+  "Distributor+Major_Genre+Source": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Major_Genre"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "Source"
+      }
+    }
+  },
   "IMDB_Rating+MPAA_Rating+Production_Budget": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -7470,7 +8846,31 @@
       }
     }
   },
-  "Distributor+MPAA_Rating+Title": {},
+  "Distributor+MPAA_Rating+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "MPAA_Rating"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "IMDB_Votes+Production_Budget+Source": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -7560,7 +8960,27 @@
       }
     }
   },
-  "Distributor+Release_Date+Running_Time_min": {},
+  "Distributor+Release_Date+Running_Time_min": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Running_Time_min"
+      }
+    }
+  },
   "Director+Running_Time_min+US_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -7642,7 +9062,27 @@
       }
     }
   },
-  "Director+Release_Date+Rotten_Tomatoes_Rating": {},
+  "Director+Release_Date+Rotten_Tomatoes_Rating": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Rotten_Tomatoes_Rating"
+      }
+    }
+  },
   "Creative_Type+US_Gross+Worldwide_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -7664,7 +9104,27 @@
       }
     }
   },
-  "Director+Release_Date+Worldwide_Gross": {},
+  "Director+Release_Date+Worldwide_Gross": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Worldwide_Gross"
+      }
+    }
+  },
   "MPAA_Rating+Source+US_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -7879,7 +9339,31 @@
       }
     }
   },
-  "Director+Major_Genre+Source": {},
+  "Director+Major_Genre+Source": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Major_Genre"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "Source"
+      }
+    }
+  },
   "Creative_Type+Distributor+Running_Time_min": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -7962,7 +9446,32 @@
       }
     }
   },
-  "Distributor+MPAA_Rating+Release_Date": {},
+  "Distributor+MPAA_Rating+Release_Date": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "color": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "MPAA_Rating"
+      },
+      "size": {
+        "type": "ordinal",
+        "field": "Release_Date",
+        "aggregate": "median"
+      }
+    }
+  },
   "Major_Genre+Rotten_Tomatoes_Rating+US_DVD_Sales": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -8088,7 +9597,27 @@
       }
     }
   },
-  "Director+Distributor+Production_Budget": {},
+  "Director+Distributor+Production_Budget": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Production_Budget"
+      }
+    }
+  },
   "Major_Genre+Worldwide_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -8364,7 +9893,31 @@
       }
     }
   },
-  "Creative_Type+Major_Genre+Source": {},
+  "Creative_Type+Major_Genre+Source": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Creative_Type"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Major_Genre"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "Source"
+      }
+    }
+  },
   "IMDB_Votes": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -8540,7 +10093,31 @@
       }
     }
   },
-  "Director+Distributor+Release_Date": {},
+  "Director+Distributor+Release_Date": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "color": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "ordinal",
+        "field": "Release_Date"
+      }
+    }
+  },
   "MPAA_Rating+Production_Budget+US_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -8630,8 +10207,48 @@
       }
     }
   },
-  "Director+Distributor+US_DVD_Sales": {},
-  "Distributor+Title+US_DVD_Sales": {},
+  "Director+Distributor+US_DVD_Sales": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "US_DVD_Sales"
+      }
+    }
+  },
+  "Distributor+Title+US_DVD_Sales": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "US_DVD_Sales"
+      }
+    }
+  },
   "IMDB_Rating+Production_Budget+Source": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -8809,7 +10426,31 @@
       }
     }
   },
-  "Major_Genre+Release_Date+Title": {},
+  "Major_Genre+Release_Date+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "color": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Major_Genre"
+      },
+      "size": {
+        "type": "ordinal",
+        "field": "Release_Date"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "Creative_Type+IMDB_Rating+Worldwide_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -9078,7 +10719,29 @@
       }
     }
   },
-  "Distributor+Rotten_Tomatoes_Rating+Running_Time_min": {},
+  "Distributor+Rotten_Tomatoes_Rating+Running_Time_min": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Rotten_Tomatoes_Rating",
+        "aggregate": "mean"
+      },
+      "x": {
+        "type": "quantitative",
+        "field": "Running_Time_min",
+        "bin": true
+      }
+    }
+  },
   "Major_Genre+Running_Time_min+US_DVD_Sales": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -9115,7 +10778,31 @@
       }
     }
   },
-  "Release_Date+Source+Title": {},
+  "Release_Date+Source+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "color": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "size": {
+        "type": "ordinal",
+        "field": "Release_Date"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Source"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "Distributor+Production_Budget+US_DVD_Sales": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -9276,8 +10963,48 @@
       }
     }
   },
-  "Release_Date+Title": {},
-  "Distributor+Release_Date": {},
+  "Release_Date+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
+  "Distributor+Release_Date": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      }
+    }
+  },
   "Creative_Type+Source+US_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -9320,7 +11047,27 @@
       }
     }
   },
-  "Distributor+IMDB_Votes+Release_Date": {},
+  "Distributor+IMDB_Votes+Release_Date": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "IMDB_Votes"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      }
+    }
+  },
   "IMDB_Rating+IMDB_Votes+Title": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -9343,7 +11090,31 @@
       }
     }
   },
-  "Creative_Type+MPAA_Rating+Major_Genre": {},
+  "Creative_Type+MPAA_Rating+Major_Genre": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Creative_Type"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "MPAA_Rating"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "Major_Genre"
+      }
+    }
+  },
   "Production_Budget+Source+Title": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -9639,7 +11410,27 @@
       }
     }
   },
-  "Distributor+Title+US_Gross": {},
+  "Distributor+Title+US_Gross": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "US_Gross"
+      }
+    }
+  },
   "Director+IMDB_Rating+MPAA_Rating": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -10007,7 +11798,27 @@
       }
     }
   },
-  "Distributor+Release_Date+Rotten_Tomatoes_Rating": {},
+  "Distributor+Release_Date+Rotten_Tomatoes_Rating": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Rotten_Tomatoes_Rating"
+      }
+    }
+  },
   "Production_Budget+Release_Date+Running_Time_min": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -10179,7 +11990,27 @@
       }
     }
   },
-  "Director+Release_Date+Running_Time_min": {},
+  "Director+Release_Date+Running_Time_min": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Running_Time_min"
+      }
+    }
+  },
   "Director+Source": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -10239,8 +12070,57 @@
       }
     }
   },
-  "Creative_Type+Distributor+Release_Date": {},
-  "Distributor+Major_Genre+Title": {},
+  "Creative_Type+Distributor+Release_Date": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "color": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Creative_Type"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "ordinal",
+        "field": "Release_Date",
+        "aggregate": "median"
+      }
+    }
+  },
+  "Distributor+Major_Genre+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "Major_Genre"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "IMDB_Votes+Rotten_Tomatoes_Rating+Running_Time_min": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -10506,7 +12386,31 @@
       }
     }
   },
-  "Creative_Type+Director+Title": {},
+  "Creative_Type+Director+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "Creative_Type"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "IMDB_Votes+Source+Worldwide_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -10589,7 +12493,27 @@
       }
     }
   },
-  "Director+Distributor+IMDB_Rating": {},
+  "Director+Distributor+IMDB_Rating": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "IMDB_Rating"
+      }
+    }
+  },
   "IMDB_Rating+US_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -10607,7 +12531,31 @@
       }
     }
   },
-  "Creative_Type+Release_Date+Title": {},
+  "Creative_Type+Release_Date+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "color": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Creative_Type"
+      },
+      "size": {
+        "type": "ordinal",
+        "field": "Release_Date"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "Major_Genre+Source+Worldwide_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -10775,7 +12723,32 @@
       }
     }
   },
-  "Distributor+Major_Genre+Release_Date": {},
+  "Distributor+Major_Genre+Release_Date": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "color": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Major_Genre"
+      },
+      "size": {
+        "type": "ordinal",
+        "field": "Release_Date",
+        "aggregate": "median"
+      }
+    }
+  },
   "Distributor+IMDB_Votes+Running_Time_min": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -10924,9 +12897,77 @@
       }
     }
   },
-  "Director+Distributor+Running_Time_min": {},
-  "Director+Distributor+Source": {},
-  "Distributor+MPAA_Rating+Major_Genre": {},
+  "Director+Distributor+Running_Time_min": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Running_Time_min"
+      }
+    }
+  },
+  "Director+Distributor+Source": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "Source"
+      }
+    }
+  },
+  "Distributor+MPAA_Rating+Major_Genre": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "MPAA_Rating"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "Major_Genre"
+      }
+    }
+  },
   "MPAA_Rating+Rotten_Tomatoes_Rating+Worldwide_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -11009,7 +13050,27 @@
       }
     }
   },
-  "Director+Distributor+US_Gross": {},
+  "Director+Distributor+US_Gross": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "US_Gross"
+      }
+    }
+  },
   "Creative_Type+Director+Rotten_Tomatoes_Rating": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -11163,7 +13224,27 @@
       }
     }
   },
-  "Director+Distributor+Worldwide_Gross": {},
+  "Director+Distributor+Worldwide_Gross": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "Worldwide_Gross"
+      }
+    }
+  },
   "Director+Major_Genre": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -11208,7 +13289,27 @@
       }
     }
   },
-  "Director+Title": {},
+  "Director+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "MPAA_Rating+Production_Budget+US_DVD_Sales": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -11264,7 +13365,31 @@
       }
     }
   },
-  "Creative_Type+Director+Distributor": {},
+  "Creative_Type+Director+Distributor": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "Creative_Type"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      }
+    }
+  },
   "Creative_Type+IMDB_Votes+Rotten_Tomatoes_Rating": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -11560,7 +13685,32 @@
       }
     }
   },
-  "Major_Genre+Release_Date+Source": {},
+  "Major_Genre+Release_Date+Source": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "color": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Major_Genre"
+      },
+      "size": {
+        "type": "ordinal",
+        "field": "Release_Date",
+        "aggregate": "median"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Source"
+      }
+    }
+  },
   "Major_Genre+Release_Date+US_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -11582,7 +13732,27 @@
       }
     }
   },
-  "Distributor+Release_Date+US_DVD_Sales": {},
+  "Distributor+Release_Date+US_DVD_Sales": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Distributor"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "US_DVD_Sales"
+      }
+    }
+  },
   "Rotten_Tomatoes_Rating+Source+US_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -11627,7 +13797,27 @@
       }
     }
   },
-  "Director+Release_Date+US_Gross": {},
+  "Director+Release_Date+US_Gross": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "y": {
+        "type": "nominal",
+        "field": "Director"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "Release_Date"
+      },
+      "size": {
+        "type": "quantitative",
+        "field": "US_Gross"
+      }
+    }
+  },
   "MPAA_Rating+Release_Date+US_DVD_Sales": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -11830,7 +14020,32 @@
       }
     }
   },
-  "MPAA_Rating+Release_Date+Source": {},
+  "MPAA_Rating+Release_Date+Source": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "color": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "MPAA_Rating"
+      },
+      "size": {
+        "type": "ordinal",
+        "field": "Release_Date",
+        "aggregate": "median"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Source"
+      }
+    }
+  },
   "Rotten_Tomatoes_Rating+Running_Time_min+Title": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -11908,7 +14123,31 @@
       }
     }
   },
-  "MPAA_Rating+Release_Date+Title": {},
+  "MPAA_Rating+Release_Date+Title": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "color": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "MPAA_Rating"
+      },
+      "size": {
+        "type": "ordinal",
+        "field": "Release_Date"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Title"
+      }
+    }
+  },
   "IMDB_Votes+Major_Genre": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
@@ -12339,7 +14578,31 @@
       }
     }
   },
-  "MPAA_Rating+Major_Genre+Source": {},
+  "MPAA_Rating+Major_Genre+Source": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "data/movies.json"
+    },
+    "mark": "point",
+    "encoding": {
+      "size": {
+        "type": "quantitative",
+        "aggregate": "count"
+      },
+      "x": {
+        "type": "nominal",
+        "field": "MPAA_Rating"
+      },
+      "y": {
+        "type": "nominal",
+        "field": "Major_Genre"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "Source"
+      }
+    }
+  },
   "Creative_Type+Title+Worldwide_Gross": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {

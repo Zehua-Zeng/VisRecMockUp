@@ -1,12 +1,12 @@
 var dataurl = "data/movies.json";
 var Fields = {
   categ: [
-    "MPAA_Rating",
-    "Source",
     "Creative_Type",
     "Director",
     "Distributor",
     "Major_Genre",
+    "MPAA_Rating",
+    "Source",
     "Title",
   ],
   date: ["Release_Date"],
@@ -31,7 +31,6 @@ var checkedFields = [];
 var queryMap = {};
 var bookmarked = {};
 
-// document.querySelector("#main_wrapper").style.display = "none";
 initial();
 
 function initial() {
@@ -233,14 +232,14 @@ function generatePlot(selectedFields, s, box) {
   $.ajax({
     async: false,
     type: "POST",
-    url: "js2pyFieldsv1",
+    url: "js2pyFieldsV1",
     currentType: "application/json",
     data: data,
     dataType: "json",
     success: function (response) {
       if (response.status === "success") {
         console.log(response);
-        var vlDict = response.actualVegaLite;
+        var vlDict = response.actualVegalite;
         for (prop in vlDict) {
           prop_str = prop.replace(/\W/g, "");
           mainImg.innerHTML = `<div id="main_wrapper" class="view_wrapper ${prop_str}_wrapper"><i class="fas fa-bookmark add_bm" added="false"></i><div class="views ${prop_str}" id="main"></div></div>`;

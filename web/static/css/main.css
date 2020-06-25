@@ -181,6 +181,7 @@ body {
   margin: 62px 0 0 0;
   padding: 10px 0 0 250px;
   color: rgb(89, 74, 114);
+  /* overflow-y: scroll; */
   overflow: scroll;
 }
 
@@ -262,15 +263,28 @@ h5 {
 
 .add_bm {
   display: block;
-  width: min-content;
+  /* width: min-content; */
   color: rgb(201, 195, 211);
   cursor: pointer;
+  margin-right: 5px;
+  /* margin: 0 0 ; */
+  float: left;
+  /* width: 10%; */
+}
+
+.specify_chart {
+  display: block;
+  /* width: min-content; */
+  color: rgb(201, 195, 211);
+  cursor: pointer;
+  float: left;
+  /* width: 10%; */
   /* margin: 0 0 ; */
 }
 
-.add_bm:hover {
+/* .add_bm:hover {
   color: rgb(255, 165, 0);
-}
+} */
 
 /* =============== scroll bar ============== */
 /* width */
