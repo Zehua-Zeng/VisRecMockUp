@@ -1,0 +1,1616 @@
+{
+  "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-x,Source-nominal-y": [
+    {
+      "path_vlstr": [
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-x,Source-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        18.4
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-x,Source-nominal-y,US_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        18.4
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        18.4
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-x,Running_Time_min-quantitative-color<aggregate>mean,Source-nominal-y"
+      ],
+      "path_scores": [
+        18.4
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-x,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean,Source-nominal-y"
+      ],
+      "path_scores": [
+        18.4
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-x,Production_Budget-quantitative-color<aggregate>mean,Source-nominal-y"
+      ],
+      "path_scores": [
+        18.4
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,MPAA_Rating-nominal-x,Source-nominal-y"
+      ],
+      "path_scores": [
+        18.4
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,MPAA_Rating-nominal-x,Source-nominal-y"
+      ],
+      "path_scores": [
+        18.4
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Source-nominal-y,US_Gross-quantitative-x<bin>,Worldwide_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.922705314009662,
+        6.148337595907928
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Source-nominal-y,US_DVD_Sales-quantitative-x<bin>,Worldwide_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.922705314009662,
+        6.148337595907928
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Running_Time_min-quantitative-x<bin>,Source-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.922705314009662,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Rotten_Tomatoes_Rating-quantitative-x<bin>,Source-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.922705314009662,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Production_Budget-quantitative-x<bin>,Source-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.922705314009662,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-x<bin>,Source-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.922705314009662,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-x<bin>,Source-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.922705314009662,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y,US_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Source-nominal-y,US_Gross-quantitative-color<aggregate>mean,Worldwide_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.922705314009662,
+        6.148337595907928
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y,US_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Source-nominal-y,US_DVD_Sales-quantitative-x<bin>,US_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.922705314009662,
+        6.148337595907928
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y,US_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Running_Time_min-quantitative-x<bin>,Source-nominal-y,US_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.922705314009662,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y,US_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Rotten_Tomatoes_Rating-quantitative-x<bin>,Source-nominal-y,US_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.922705314009662,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y,US_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Production_Budget-quantitative-x<bin>,Source-nominal-y,US_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.922705314009662,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y,US_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-x<bin>,Source-nominal-y,US_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.922705314009662,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y,US_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-x<bin>,Source-nominal-y,US_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.922705314009662,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Source-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean,Worldwide_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.922705314009662,
+        5.399851079672375
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Source-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean,US_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.922705314009662,
+        5.399851079672375
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Running_Time_min-quantitative-x<bin>,Source-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.922705314009662,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Rotten_Tomatoes_Rating-quantitative-x<bin>,Source-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.922705314009662,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Production_Budget-quantitative-x<bin>,Source-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.922705314009662,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-x<bin>,Source-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.922705314009662,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-x<bin>,Source-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.922705314009662,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Running_Time_min-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Running_Time_min-quantitative-color<aggregate>mean,Source-nominal-y,Worldwide_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.14828137490008
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Running_Time_min-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Running_Time_min-quantitative-color<aggregate>mean,Source-nominal-y,US_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.14828137490008
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Running_Time_min-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Running_Time_min-quantitative-color<aggregate>mean,Source-nominal-y,US_DVD_Sales-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.14828137490008
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Running_Time_min-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Rotten_Tomatoes_Rating-quantitative-x<bin>,Running_Time_min-quantitative-color<aggregate>mean,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        5.386779184247539
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Running_Time_min-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Production_Budget-quantitative-x<bin>,Running_Time_min-quantitative-color<aggregate>mean,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        5.386779184247539
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Running_Time_min-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-x<bin>,Running_Time_min-quantitative-color<aggregate>mean,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        5.386779184247539
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Running_Time_min-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-x<bin>,Running_Time_min-quantitative-color<aggregate>mean,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        5.386779184247539
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean,Source-nominal-y,Worldwide_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.14828137490008
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean,Source-nominal-y,US_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.14828137490008
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean,Source-nominal-y,US_DVD_Sales-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.14828137490008
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean,Running_Time_min-quantitative-x<bin>,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Production_Budget-quantitative-x<bin>,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        5.386779184247539
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-x<bin>,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        5.386779184247539
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-x<bin>,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        5.386779184247539
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Production_Budget-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Production_Budget-quantitative-color<aggregate>mean,Source-nominal-y,Worldwide_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.14828137490008
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Production_Budget-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Production_Budget-quantitative-color<aggregate>mean,Source-nominal-y,US_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.14828137490008
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Production_Budget-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Production_Budget-quantitative-color<aggregate>mean,Source-nominal-y,US_DVD_Sales-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.14828137490008
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Production_Budget-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Production_Budget-quantitative-color<aggregate>mean,Running_Time_min-quantitative-x<bin>,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Production_Budget-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,Production_Budget-quantitative-color<aggregate>mean,Rotten_Tomatoes_Rating-quantitative-x<bin>,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Production_Budget-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-x<bin>,Production_Budget-quantitative-color<aggregate>mean,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        5.386779184247539
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Production_Budget-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-x<bin>,Production_Budget-quantitative-color<aggregate>mean,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        5.386779184247539
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:point;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-shape,Source-nominal-y",
+        "mark:point;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,MPAA_Rating-nominal-shape,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        3.5284921098772646,
+        1.952791068580542
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,Source-nominal-y,Worldwide_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.14828137490008
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,Source-nominal-y,US_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.14828137490008
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,Source-nominal-y,US_DVD_Sales-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.14828137490008
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,Running_Time_min-quantitative-x<bin>,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,Rotten_Tomatoes_Rating-quantitative-x<bin>,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,Production_Budget-quantitative-x<bin>,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-x<bin>,IMDB_Votes-quantitative-color<aggregate>mean,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        5.386779184247539
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,Source-nominal-y,Worldwide_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.14828137490008
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,Source-nominal-y,US_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.14828137490008
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,Source-nominal-y,US_DVD_Sales-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.14828137490008
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,Running_Time_min-quantitative-x<bin>,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,Rotten_Tomatoes_Rating-quantitative-x<bin>,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,Production_Budget-quantitative-x<bin>,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,Source-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,IMDB_Votes-quantitative-x<bin>,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        2.9226600985221673,
+        6.1352657004830915
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,Source-nominal-y",
+        "mark:point;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,Source-nominal-y,Worldwide_Gross-quantitative-size<aggregate>mean"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        3.3529411764705883,
+        2.881618381618382
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,Source-nominal-y",
+        "mark:point;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,Source-nominal-y,US_Gross-quantitative-size<aggregate>mean"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        3.3529411764705883,
+        2.881618381618382
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,Source-nominal-y",
+        "mark:point;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        3.3529411764705883,
+        2.881618381618382
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,Source-nominal-y",
+        "mark:point;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        3.3529411764705883,
+        2.903785869303111
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,Source-nominal-y",
+        "mark:point;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,Rotten_Tomatoes_Rating-quantitative-size<aggregate>mean,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        3.3529411764705883,
+        2.903785869303111
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,Source-nominal-y",
+        "mark:point;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,Production_Budget-quantitative-size<aggregate>mean,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        3.3529411764705883,
+        2.903785869303111
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,Source-nominal-y",
+        "mark:point;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,IMDB_Votes-quantitative-size<aggregate>mean,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        3.3529411764705883,
+        2.903785869303111
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,Source-nominal-y",
+        "mark:point;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,IMDB_Rating-quantitative-size<aggregate>mean,Source-nominal-y"
+      ],
+      "path_scores": [
+        23.18918918918919,
+        3.3529411764705883,
+        2.903785869303111
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,US_Gross-quantitative-x<bin>,Worldwide_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.293265132139813
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,US_DVD_Sales-quantitative-x<bin>,Worldwide_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.293265132139813
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Running_Time_min-quantitative-x<bin>,Worldwide_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.293265132139813
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-x<bin>,Worldwide_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.293265132139813
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Production_Budget-quantitative-x<bin>,Worldwide_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.293265132139813
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-x<bin>,MPAA_Rating-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.280193236714976
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-x<bin>,MPAA_Rating-nominal-y,Worldwide_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.280193236714976
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,US_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,US_Gross-quantitative-color<aggregate>mean,Worldwide_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.293265132139813
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,US_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,US_DVD_Sales-quantitative-x<bin>,US_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.293265132139813
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,US_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Running_Time_min-quantitative-x<bin>,US_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.293265132139813
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,US_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-x<bin>,US_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.293265132139813
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,US_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Production_Budget-quantitative-x<bin>,US_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.293265132139813
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,US_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-x<bin>,MPAA_Rating-nominal-y,US_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.280193236714976
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,US_Gross-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-x<bin>,MPAA_Rating-nominal-y,US_Gross-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.280193236714976
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean,Worldwide_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        5.526433358153388
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean,US_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        5.526433358153388
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Running_Time_min-quantitative-x<bin>,US_DVD_Sales-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.293265132139813
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-x<bin>,US_DVD_Sales-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.293265132139813
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Production_Budget-quantitative-x<bin>,US_DVD_Sales-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.293265132139813
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-x<bin>,MPAA_Rating-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.280193236714976
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-x<bin>,MPAA_Rating-nominal-y,US_DVD_Sales-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.280193236714976
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Running_Time_min-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Running_Time_min-quantitative-color<aggregate>mean,Worldwide_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        5.526433358153388
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Running_Time_min-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Running_Time_min-quantitative-color<aggregate>mean,US_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        5.526433358153388
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Running_Time_min-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Running_Time_min-quantitative-color<aggregate>mean,US_DVD_Sales-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        5.526433358153388
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Running_Time_min-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-x<bin>,Running_Time_min-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.293265132139813
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Running_Time_min-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Production_Budget-quantitative-x<bin>,Running_Time_min-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.293265132139813
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Running_Time_min-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-x<bin>,MPAA_Rating-nominal-y,Running_Time_min-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.280193236714976
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Running_Time_min-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-x<bin>,MPAA_Rating-nominal-y,Running_Time_min-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.280193236714976
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean,Worldwide_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        5.526433358153388
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean,US_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        5.526433358153388
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean,US_DVD_Sales-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        5.526433358153388
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean,Running_Time_min-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        5.526433358153388
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Production_Budget-quantitative-x<bin>,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.293265132139813
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-x<bin>,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.280193236714976
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-x<bin>,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.280193236714976
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Production_Budget-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Production_Budget-quantitative-color<aggregate>mean,Worldwide_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        5.526433358153388
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Production_Budget-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Production_Budget-quantitative-color<aggregate>mean,US_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        5.526433358153388
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Production_Budget-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Production_Budget-quantitative-color<aggregate>mean,US_DVD_Sales-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        5.526433358153388
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Production_Budget-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Production_Budget-quantitative-color<aggregate>mean,Running_Time_min-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        5.526433358153388
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Production_Budget-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,MPAA_Rating-nominal-y,Production_Budget-quantitative-color<aggregate>mean,Rotten_Tomatoes_Rating-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        5.526433358153388
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Production_Budget-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-x<bin>,MPAA_Rating-nominal-y,Production_Budget-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.280193236714976
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y,Production_Budget-quantitative-color<aggregate>mean",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-x<bin>,MPAA_Rating-nominal-y,Production_Budget-quantitative-color<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.0615942028985508,
+        6.280193236714976
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y,Worldwide_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.060591133004926,
+        6.292166266986411
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y,US_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.060591133004926,
+        6.292166266986411
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y,US_DVD_Sales-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.060591133004926,
+        6.292166266986411
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y,Running_Time_min-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.060591133004926,
+        5.568917018284107
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.060591133004926,
+        6.292166266986411
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y,Production_Budget-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.060591133004926,
+        6.292166266986411
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Votes-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-x<bin>,IMDB_Votes-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.060591133004926,
+        5.513361462728551
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y,Worldwide_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.060591133004926,
+        6.292166266986411
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y,US_Gross-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.060591133004926,
+        6.292166266986411
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y,US_DVD_Sales-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.060591133004926,
+        6.292166266986411
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y,Running_Time_min-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.060591133004926,
+        6.292166266986411
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.060591133004926,
+        5.568917018284107
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y,Production_Budget-quantitative-x<bin>"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.060591133004926,
+        6.335748792270532
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-size<aggregate>count,IMDB_Rating-quantitative-color<aggregate>mean,IMDB_Votes-quantitative-x<bin>,MPAA_Rating-nominal-y"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.060591133004926,
+        6.280193236714976
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,MPAA_Rating-nominal-y,Worldwide_Gross-quantitative-size<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.5210084033613445,
+        3.0214785214785214
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,MPAA_Rating-nominal-y,US_Gross-quantitative-size<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.5210084033613445,
+        3.0214785214785214
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,MPAA_Rating-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.5210084033613445,
+        3.0214785214785214
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,MPAA_Rating-nominal-y,Running_Time_min-quantitative-size<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.5210084033613445,
+        3.0214785214785214
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.5210084033613445,
+        3.0214785214785214
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,MPAA_Rating-nominal-y,Production_Budget-quantitative-size<aggregate>mean"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.5210084033613445,
+        3.0214785214785214
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,IMDB_Votes-quantitative-size<aggregate>mean,MPAA_Rating-nominal-y"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.5210084033613445,
+        3.0436460091632505
+      ]
+    },
+    {
+      "path_vlstr": [
+        "mark:bar;encoding:-quantitative-x<aggregate>count,MPAA_Rating-nominal-y",
+        "mark:bar;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,MPAA_Rating-nominal-y",
+        "mark:point;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-color,IMDB_Rating-quantitative-size<aggregate>mean,MPAA_Rating-nominal-y"
+      ],
+      "path_scores": [
+        60.95238095238095,
+        3.5210084033613445,
+        3.0436460091632505
+      ]
+    }
+  ]
+}

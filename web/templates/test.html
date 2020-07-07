@@ -28,15 +28,18 @@
         mark: "point",
         encoding: {
           size: {
-            type: "quantitative",
             aggregate: "count",
+            type: "quantitative",
           },
-          x: { type: "nominal", field: "Creative_Type" },
-          y: { type: "nominal", field: "Director" },
-          color: { type: "nominal", field: "MPAA_Rating" },
+          x: { bin: true, field: "IMDB_Votes", type: "quantitative" },
+          y: { field: "Creative_Type", type: "nominal" },
+          color: {
+            aggregate: "mean",
+            field: "IMDB_Rating",
+            type: "quantitative",
+          },
         },
       };
-
       // Embed the visualization in the container with id `vis`
       vegaEmbed("#vis", vlSpec);
     </script>

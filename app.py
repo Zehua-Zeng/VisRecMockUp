@@ -15,14 +15,14 @@ all_fields = base.get_fields()
 read_vlsf = open('vegalite_selected_fields.json', 'r')
 vlsf = json.load(read_vlsf)
 
-# read_f2vlstr = open('fields2vegaliteStr.json', 'r')
-# f2vlstr = json.load(read_f2vlstr)
-
 read_bsf_results = open('combine_bfs_result.json', 'r')
 bsf_results = json.load(read_bsf_results)
 
-read_dfs_last = open('temp_results_v3.json', 'r')
-depth_first_last_node_result = json.load(read_dfs_last)
+read_f2vlstr = open('fields2vegaliteStr.json', 'r')
+f2vlstr = json.load(read_f2vlstr)
+
+read_all_vlstr = open('all_vegalite_str.json', 'r')
+all_vlstr = json.load(read_all_vlstr)
 
 ## flask
 app = Flask(__name__, static_folder='web/static',
@@ -47,6 +47,11 @@ def v2():
 @app.route('/DepthFirstLastNode')
 def v3():
     return render_template("v3.html")
+
+# Depth-first-path at route /v4
+@app.route('/DepthFirstPath')
+def v4():
+    return render_template("v4.html")
 
 @app.route('/test')
 def test():
@@ -84,6 +89,15 @@ def js2pyFieldsV1():
 def js2pyFieldsV2():
     receivedData = json.loads(request.form.get('data'))
     fields = receivedData["fields"]
+    # init:
+    if len(fields) == 0:
+        initCharts = []
+        for field in all_fields:
+            vlstr = get_vlStr_from_vl(vlsf[field])
+            temp = {}
+            temp[vlstr] = vlsf[field]
+            initCharts.append(temp)
+        return jsonify(status="success", actualVegalite="", recVegalite=initCharts) 
     fields.sort()
     fields_str = "+".join(fields)
     vegaliteDictFinal = {}
@@ -136,36 +150,174 @@ def js2pySpecV2():
 def js2pyFieldsV3():
     receivedData = json.loads(request.form.get('data'))
     fields = receivedData["fields"]
-    # print (fields)
-    vegaliteDict = {}
-    if len(fields) == 1:
-        chart = base.field(fields[0])
-        vegaliteDict = chart._get_vegalite()
-    if len(fields) == 2:
-        chart = base.field(fields[0], fields[1])
-        vegaliteDict = chart._get_vegalite()
-    if len(fields) == 3:
-        chart = base.field(fields[0], fields[1], fields[2])
-        vegaliteDict = chart._get_vegalite()
-    vegaliteStr = json.dumps(vegaliteDict)
-    vegaliteStr = vegaliteStr.replace('cars', 'movies')
-    vegaliteStr = vegaliteStr.replace(', "scale": {"zero": true}', '')
-    vegaliteDictFinal = json.loads(vegaliteStr)
+    # init:
+    if len(fields) == 0:
+        initCharts = []
+        for field in all_fields:
+            vlstr = get_vlStr_from_vl(vlsf[field])
+            temp = {}
+            temp[vlstr] = vlsf[field]
+            initCharts.append(temp)
+        return jsonify(status="success", actualVegalite="", recVegalite=initCharts) 
     fields.sort()
-    fieldStr = "+".join(fields)
-    try:
-        vegaliteUnordered = depth_first_last_node_result[fieldStr]
-    except:
-        return jsonify(status="success", actualVegaLite=vegaliteDictFinal, recVegaLite="")
-    vegaliteRanked = sorted(vegaliteUnordered, key=vegaliteUnordered.get)
-    vegaliteRankedFinal = []
-    for vgl in vegaliteRanked:
-        if '"row":' in vgl:
-            continue
-        vgl = vgl.replace('cars', 'movies')
-        vgl = vgl.replace(', "scale": {"zero": true}', '')
-        vegaliteRankedFinal.append(json.loads(vgl))
-    return jsonify(status="success", actualVegaLite=vegaliteDictFinal, recVegaLite=vegaliteRankedFinal)
+    fields_str = "+".join(fields)
+    vegaliteDictFinal = {}
+    if not vlsf[fields_str]:
+        return jsonify(status="empty", actualVegalite=vegaliteDictFinal, recVegalite="")
+    vlstr = get_vlStr_from_vl(vlsf[fields_str])
+    vegaliteDictFinal[vlstr] = vlsf[fields_str]
+
+    # get recomendation:
+    idx = all_vlstr.index(vlstr)
+    print (idx)
+    read_dfs_results = open('./dfs/' + str(idx) + '.json', 'r')
+    dfs_results = json.load(read_dfs_results)
+    dfs_results_dict = {}
+    for cur in dfs_results:
+        for one_result in dfs_results[cur]:
+            path = "+".join(one_result["path_vlstr"])
+            # print (path)
+            score = sum(one_result["path_scores"])
+            dfs_results_dict[path] = score
+    # print (len(dfs_results_dict))
+    dfs_results_ranked = sorted(dfs_results_dict, key=dfs_results_dict.get)
+    print (len(dfs_results_ranked))
+    dfs_results_trim = dfs_results_ranked[:20]
+    dfsRankedFinal = []
+    for dfs_res in dfs_results_trim:
+        temp = {}
+        ln_vlstr = dfs_res.split('+')[-1]
+        ln_vljson = get_vl_from_vlStr(ln_vlstr)
+        temp[ln_vlstr] = ln_vljson
+        dfsRankedFinal.append(temp)
+    return jsonify(status="success", actualVegalite=vegaliteDictFinal, recVegalite=dfsRankedFinal)
+
+@app.route('/js2pySpecV3', methods=['POST'])
+def js2pySpecV3():
+    receivedData = json.loads(request.form.get('data'))
+    vl = receivedData["vljson"]
+    # vl = json.loads(vljson_str)
+    vlstr = get_vlStr_from_vl(vl)
+    fields = get_fields_from_vlstr(vlstr)
+    fields_str = "+".join(fields)
+
+    new_vlstr = get_vlStr_from_vl(vlsf[fields_str])
+
+    # get recomendation:
+    idx = all_vlstr.index(new_vlstr)
+    print (idx)
+    read_dfs_results = open('./dfs/' + str(idx) + '.json', 'r')
+    dfs_results = json.load(read_dfs_results)
+    dfs_results_dict = {}
+    for cur in dfs_results:
+        for one_result in dfs_results[cur]:
+            path = "+".join(one_result["path_vlstr"])
+            score = sum(one_result["path_scores"])
+            dfs_results_dict[path] = score
+    # print(dfs_results_dict)
+    dfs_results_ranked = sorted(dfs_results_dict, key=dfs_results_dict.get)
+    print (len(dfs_results_ranked))
+    dfs_results_trim = dfs_results_ranked[:20]
+    dfsRankedFinal = []
+    for dfs_res in dfs_results_trim:
+        temp = {}
+        ln_vlstr = dfs_res.split('+')[-1]
+        ln_vljson = get_vl_from_vlStr(ln_vlstr)
+        temp[ln_vlstr] = ln_vljson
+        dfsRankedFinal.append(temp)
+
+    return jsonify(status="success", recVegalite=dfsRankedFinal)
+
+@app.route('/js2pyFieldsV4', methods=['POST'])
+def js2pyFieldsV4():
+    print ("v4")
+    receivedData = json.loads(request.form.get('data'))
+    fields = receivedData["fields"]
+    # init:
+    if len(fields) == 0:
+        initCharts = []
+        for field in all_fields:
+            vlstr = get_vlStr_from_vl(vlsf[field])
+            temp = {}
+            temp[vlstr] = vlsf[field]
+            initCharts.append(temp)
+        return jsonify(status="success", actualVegalite="", recVegalite=initCharts) 
+    fields.sort()
+    fields_str = "+".join(fields)
+    vegaliteDictFinal = {}
+    if not vlsf[fields_str]:
+        return jsonify(status="empty", actualVegalite=vegaliteDictFinal, recVegalite="")
+    vlstr = get_vlStr_from_vl(vlsf[fields_str])
+    vegaliteDictFinal[vlstr] = vlsf[fields_str]
+
+    # get recomendation:
+    idx = all_vlstr.index(vlstr)
+    print (idx)
+    read_dfs_results = open('./dfs/' + str(idx) + '.json', 'r')
+    dfs_results = json.load(read_dfs_results)
+    dfs_results_dict = {}
+    for cur in dfs_results:
+        for one_result in dfs_results[cur]:
+            path = "+".join(one_result["path_vlstr"])
+            # print (path)
+            score = sum(one_result["path_scores"])
+            dfs_results_dict[path] = score
+    print (len(dfs_results_dict))
+    dfs_results_ranked = sorted(dfs_results_dict, key=dfs_results_dict.get)
+    print (len(dfs_results_ranked))
+    dfs_results_trim = dfs_results_ranked[:20]
+    dfsPathRankedFinal = []
+    for dfs_res in dfs_results_trim:
+        dfs_one_path = []
+        dfs_res_split = dfs_res.split('+')
+        for ln_vlstr in dfs_res_split:
+            temp = {}
+            ln_vljson = get_vl_from_vlStr(ln_vlstr)
+            temp[ln_vlstr] = ln_vljson
+            dfs_one_path.append(temp)
+        dfsPathRankedFinal.append(dfs_one_path)
+    return jsonify(status="success", actualVegalite=vegaliteDictFinal, recVegalite=dfsPathRankedFinal)
+
+@app.route('/js2pySpecV4', methods=['POST'])
+def js2pySpecV4():
+    print ("v4")
+    receivedData = json.loads(request.form.get('data'))
+    vl = receivedData["vljson"]
+    # vl = json.loads(vljson_str)
+    vlstr = get_vlStr_from_vl(vl)
+    fields = get_fields_from_vlstr(vlstr)
+    fields_str = "+".join(fields)
+
+    new_vlstr = get_vlStr_from_vl(vlsf[fields_str])
+
+    # get recomendation:
+    idx = all_vlstr.index(new_vlstr)
+    print (idx)
+    read_dfs_results = open('./dfs/' + str(idx) + '.json', 'r')
+    dfs_results = json.load(read_dfs_results)
+    dfs_results_dict = {}
+    for cur in dfs_results:
+        for one_result in dfs_results[cur]:
+            path = "+".join(one_result["path_vlstr"])
+            # print (path)
+            score = sum(one_result["path_scores"])
+            dfs_results_dict[path] = score
+    print (len(dfs_results_dict))
+    dfs_results_ranked = sorted(dfs_results_dict, key=dfs_results_dict.get)
+    print (len(dfs_results_ranked))
+    dfs_results_trim = dfs_results_ranked[:20]
+    dfsPathRankedFinal = []
+    for dfs_res in dfs_results_trim:
+        dfs_one_path = []
+        dfs_res_split = dfs_res.split('+')
+        for ln_vlstr in dfs_res_split:
+            temp = {}
+            ln_vljson = get_vl_from_vlStr(ln_vlstr)
+            temp[ln_vlstr] = ln_vljson
+            dfs_one_path.append(temp)
+        dfsPathRankedFinal.append(dfs_one_path)
+
+    return jsonify(status="success", recVegalite=dfsPathRankedFinal)
 
 
 # helper methods:

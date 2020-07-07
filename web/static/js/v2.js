@@ -117,6 +117,41 @@ function initField(fields) {
       modal.style.display = "none";
     }
   });
+
+  generateInitRecPlots();
+}
+
+function generateInitRecPlots() {
+  var data = {
+    data: JSON.stringify({
+      fields: [],
+    }),
+  };
+  $.ajax({
+    async: false,
+    type: "POST",
+    url: "js2pyFieldsV2",
+    currentType: "application/json",
+    data: data,
+    dataType: "json",
+    success: function (response) {
+      console.log(response);
+      relatedImg.innerHTML = "";
+      bfsRec = response.recVegalite;
+      // console.log(bfsRec);
+      for (var i = 0; i < bfsRec.length; i++) {
+        for (let prop in bfsRec[i]) {
+          let prop_str = JSON.stringify(prop).replace(/\W/g, "");
+          relatedImg.innerHTML += `<div class='view_wrapper ${prop_str}_wrapper'><i class='fas fa-bookmark add_bm' added="false"></i><i class="fas fa-list-alt specify_chart"></i><div class="views cate" id='${prop_str}'></div></div>`;
+          let VlSpec = bfsRec[i][prop];
+          vegaEmbed(`#${prop_str}`, VlSpec);
+          queryMap[prop_str] = VlSpec;
+        }
+      }
+      document.querySelector(".loadmoreDiv").style.display = "none";
+      chart_btns();
+    },
+  });
 }
 
 function onClickEvent(e) {
@@ -144,7 +179,8 @@ function onClickEvent(e) {
       });
       // if 0 fields are checked, display alternative message.
       if (checkedFields.length == 0) {
-        mainImg.innerHTML = `Welcome! Start exploring by selecting fields in the Field panel.`;
+        mainImg.innerHTML = `No specified visualization yet. Start exploring by selecting fields on the Field panel or specifying a chart below.`;
+        generateInitRecPlots();
         return;
       }
     }
@@ -336,26 +372,6 @@ function loadMoreRec() {
       document.querySelector(`.${prop_str}_wrapper`).style.display = "block";
     }
   }
-  // relatedImg.innerHTML = "";
-  // for (var i = 0; i < curBFSRecLen; i++) {
-  //   for (let prop in bfsRec[i]) {
-  //     let prop_str = JSON.stringify(prop).replace(/\W/g, "");
-  //     let VlSpec = bfsRec[i][prop];
-  //     vegaEmbed(`#${prop_str}`, VlSpec);
-  //   }
-  // }
-
-  // for (var i = curBFSRecLen; i < maxNum; i++) {
-  //   for (let prop in bfsRec[i]) {
-  //     let prop_str = JSON.stringify(prop).replace(/\W/g, "");
-  //     relatedImg.innerHTML += `<div class='view_wrapper ${prop_str}_wrapper'><i class='fas fa-bookmark add_bm' added="false"></i><i class="fas fa-list-alt specify_chart"></i><div class="views cate" id='${prop_str}'></div></div>`;
-  //     let VlSpec = bfsRec[i][prop];
-  //     vegaEmbed(`#${prop_str}`, VlSpec);
-  //     queryMap[prop_str] = VlSpec;
-  //   }
-  // }
-  // console.log(document.getElementById(`${lastChartID}`));
-  // document.getElementById(`${lastChartID}`).scrollIntoView();
   chart_btns();
   curBFSRecLen = maxNum;
 }

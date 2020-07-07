@@ -249,23 +249,49 @@ vlsf = json.load(read_vlsf)
 # with open('new_vegalite_selected_fields.json', 'w') as out:
 #     json.dump(new_vlsf, out, indent=2)
 
-read_combine_bfs_result = open("combine_bfs_result.json", 'r')
-combine_bfs_result = json.load(read_combine_bfs_result)
+# read_combine_bfs_result = open("combine_bfs_result.json", 'r')
+# combine_bfs_result = json.load(read_combine_bfs_result)
 
-fields2vegaliteStr = {}
+# fields2vegaliteStr = {}
 
-for field_comb in vlsf:
-    if not vlsf[field_comb]:
-        fields2vegaliteStr[field_comb] = ""
-        continue
-    chart_vegalite = vlsf[field_comb]
-    fields2vegaliteStr[field_comb] = get_vegalite_str_from_vegalite(chart_vegalite)
+# for field_comb in vlsf:
+#     if not vlsf[field_comb]:
+#         fields2vegaliteStr[field_comb] = ""
+#         continue
+#     chart_vegalite = vlsf[field_comb]
+#     fields2vegaliteStr[field_comb] = get_vegalite_str_from_vegalite(chart_vegalite)
 
-for field_comb in fields2vegaliteStr:
-    vlstr = fields2vegaliteStr[field_comb]
-    if vlstr != "":
-        if vlstr not in combine_bfs_result:
-            print (vlstr)
+# for field_comb in fields2vegaliteStr:
+#     vlstr = fields2vegaliteStr[field_comb]
+#     if vlstr != "":
+#         if vlstr not in combine_bfs_result:
+#             print (vlstr)
+
+# print (fields2vegaliteStr['MPAA_Rating'])
+
+# read_all_vl_str = open('all_vegalite_str.json', 'r')
+# all_vl_str = json.load(read_all_vl_str)
+
+# print (all_vl_str.index(fields2vegaliteStr['MPAA_Rating']))
 
 # with open('fields2vegaliteStr.json', 'w') as out:
 #     json.dump(fields2vegaliteStr, out, indent=2)
+
+for idx in range(0, 695):
+    print (idx)
+    read_dfs_results = open('./dfs_3/' + str(idx) + '.json', 'r')
+    dfs_results = json.load(read_dfs_results)
+
+    new_dfs_results = {}
+
+    for cur in dfs_results:
+        results = []
+        for one_result in dfs_results[cur]:
+            path = "+".join(one_result["path_vlstr"])
+            if "-row" in path or "-column" in path:
+                continue
+            results.append(one_result)
+        new_dfs_results[cur] = results
+    
+    with open('./dfs_4/' + str(idx) + '.json', 'w') as out:
+        json.dump(new_dfs_results, out, indent=2)
