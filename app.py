@@ -43,13 +43,13 @@ def v1():
 def v2():
     return render_template("v2.html")
 
-# Depth-first-last-node at route /v3
-@app.route('/DepthFirstLastNode')
+# Depth-first-last-node (Sum) at route /v3
+@app.route('/DepthFirstLastNodeSum')
 def v3():
     return render_template("v3.html")
 
 # Depth-first-path at route /v4
-@app.route('/DepthFirstPath')
+@app.route('/DepthFirstPathSum')
 def v4():
     return render_template("v4.html")
 
@@ -57,6 +57,16 @@ def v4():
 @app.route('/Breadth-vs-Depth')
 def v5():
     return render_template("v5.html")
+
+# Depth-first-last-node (Average) at route /v6
+@app.route('/DepthFirstLastNodeAvg')
+def v6():
+    return render_template("v6.html")
+
+# Depth-first-path at route /v4
+@app.route('/DepthFirstPathAvg')
+def v7():
+    return render_template("v7.html")
 
 @app.route('/test')
 def test():
@@ -219,8 +229,10 @@ def js2pySpecV3():
             path = "+".join(one_result["path_vlstr"])
             score = sum(one_result["path_scores"])
             dfs_results_dict[path] = score
+    print ("v3")
     # print(dfs_results_dict)
     dfs_results_ranked = sorted(dfs_results_dict, key=dfs_results_dict.get)
+    # print (dfs_results_ranked)
     print (len(dfs_results_ranked))
     dfs_results_trim = dfs_results_ranked[:20]
     dfsRankedFinal = []
@@ -436,6 +448,178 @@ def js2pySpecV5():
 
     return jsonify(status="success", bfsRecVegalite=bfsRankedFinal, dfsRecVegalite=dfsRankedFinal)
 
+@app.route('/js2pyFieldsV6', methods=['POST'])
+def js2pyFieldsV6():
+    receivedData = json.loads(request.form.get('data'))
+    fields = receivedData["fields"]
+    # init:
+    if len(fields) == 0:
+        initCharts = []
+        for field in all_fields:
+            vlstr = get_vlStr_from_vl(vlsf[field])
+            temp = {}
+            temp[vlstr] = vlsf[field]
+            initCharts.append(temp)
+        return jsonify(status="success", actualVegalite="", recVegalite=initCharts) 
+    fields.sort()
+    fields_str = "+".join(fields)
+    vegaliteDictFinal = {}
+    if not vlsf[fields_str]:
+        return jsonify(status="empty", actualVegalite=vegaliteDictFinal, recVegalite="")
+    vlstr = get_vlStr_from_vl(vlsf[fields_str])
+    vegaliteDictFinal[vlstr] = vlsf[fields_str]
+
+    # get recomendation:
+    idx = all_vlstr.index(vlstr)
+    print (idx)
+    read_dfs_results = open('./dfs/' + str(idx) + '.json', 'r')
+    dfs_results = json.load(read_dfs_results)
+    dfs_results_dict = {}
+    for cur in dfs_results:
+        for one_result in dfs_results[cur]:
+            path = "+".join(one_result["path_vlstr"])
+            # print (path)
+            score = sum(one_result["path_scores"]) / len(one_result["path_scores"])
+            dfs_results_dict[path] = score
+    # print (len(dfs_results_dict))
+    dfs_results_ranked = sorted(dfs_results_dict, key=dfs_results_dict.get)
+    print (len(dfs_results_ranked))
+    dfs_results_trim = dfs_results_ranked[:20]
+    dfsRankedFinal = []
+    for dfs_res in dfs_results_trim:
+        temp = {}
+        ln_vlstr = dfs_res.split('+')[-1]
+        ln_vljson = get_vl_from_vlStr(ln_vlstr)
+        temp[ln_vlstr] = ln_vljson
+        dfsRankedFinal.append(temp)
+    return jsonify(status="success", actualVegalite=vegaliteDictFinal, recVegalite=dfsRankedFinal)
+
+@app.route('/js2pySpecV6', methods=['POST'])
+def js2pySpecV6():
+    receivedData = json.loads(request.form.get('data'))
+    vl = receivedData["vljson"]
+    # vl = json.loads(vljson_str)
+    vlstr = get_vlStr_from_vl(vl)
+    fields = get_fields_from_vlstr(vlstr)
+    fields_str = "+".join(fields)
+
+    new_vlstr = get_vlStr_from_vl(vlsf[fields_str])
+
+    # get recomendation:
+    idx = all_vlstr.index(new_vlstr)
+    print (idx)
+    read_dfs_results = open('./dfs/' + str(idx) + '.json', 'r')
+    dfs_results = json.load(read_dfs_results)
+    dfs_results_dict = {}
+    for cur in dfs_results:
+        for one_result in dfs_results[cur]:
+            path = "+".join(one_result["path_vlstr"])
+            score = sum(one_result["path_scores"]) / len(one_result["path_scores"])
+            dfs_results_dict[path] = score
+    print ("v6")
+    # print(dfs_results_dict)
+    dfs_results_ranked = sorted(dfs_results_dict, key=dfs_results_dict.get)
+    #print (dfs_results_ranked)
+    print (len(dfs_results_ranked))
+    dfs_results_trim = dfs_results_ranked[:20]
+    dfsRankedFinal = []
+    for dfs_res in dfs_results_trim:
+        temp = {}
+        ln_vlstr = dfs_res.split('+')[-1]
+        ln_vljson = get_vl_from_vlStr(ln_vlstr)
+        temp[ln_vlstr] = ln_vljson
+        dfsRankedFinal.append(temp)
+
+    return jsonify(status="success", recVegalite=dfsRankedFinal)
+
+@app.route('/js2pyFieldsV7', methods=['POST'])
+def js2pyFieldsV7():
+    receivedData = json.loads(request.form.get('data'))
+    fields = receivedData["fields"]
+    # init:
+    if len(fields) == 0:
+        initCharts = []
+        for field in all_fields:
+            vlstr = get_vlStr_from_vl(vlsf[field])
+            temp = {}
+            temp[vlstr] = vlsf[field]
+            initCharts.append(temp)
+        return jsonify(status="success", actualVegalite="", recVegalite=initCharts) 
+    fields.sort()
+    fields_str = "+".join(fields)
+    vegaliteDictFinal = {}
+    if not vlsf[fields_str]:
+        return jsonify(status="empty", actualVegalite=vegaliteDictFinal, recVegalite="")
+    vlstr = get_vlStr_from_vl(vlsf[fields_str])
+    vegaliteDictFinal[vlstr] = vlsf[fields_str]
+
+    # get recomendation:
+    idx = all_vlstr.index(vlstr)
+    print (idx)
+    read_dfs_results = open('./dfs/' + str(idx) + '.json', 'r')
+    dfs_results = json.load(read_dfs_results)
+    dfs_results_dict = {}
+    for cur in dfs_results:
+        for one_result in dfs_results[cur]:
+            path = "+".join(one_result["path_vlstr"])
+            # print (path)
+            score = sum(one_result["path_scores"]) / len(one_result["path_scores"])
+            dfs_results_dict[path] = score
+    print (len(dfs_results_dict))
+    dfs_results_ranked = sorted(dfs_results_dict, key=dfs_results_dict.get)
+    print (len(dfs_results_ranked))
+    dfs_results_trim = dfs_results_ranked[:20]
+    dfsPathRankedFinal = []
+    for dfs_res in dfs_results_trim:
+        dfs_one_path = []
+        dfs_res_split = dfs_res.split('+')
+        for ln_vlstr in dfs_res_split:
+            temp = {}
+            ln_vljson = get_vl_from_vlStr(ln_vlstr)
+            temp[ln_vlstr] = ln_vljson
+            dfs_one_path.append(temp)
+        dfsPathRankedFinal.append(dfs_one_path)
+    return jsonify(status="success", actualVegalite=vegaliteDictFinal, recVegalite=dfsPathRankedFinal)
+
+@app.route('/js2pySpecV7', methods=['POST'])
+def js2pySpecV7():
+    receivedData = json.loads(request.form.get('data'))
+    vl = receivedData["vljson"]
+    # vl = json.loads(vljson_str)
+    vlstr = get_vlStr_from_vl(vl)
+    fields = get_fields_from_vlstr(vlstr)
+    fields_str = "+".join(fields)
+
+    new_vlstr = get_vlStr_from_vl(vlsf[fields_str])
+
+    # get recomendation:
+    idx = all_vlstr.index(new_vlstr)
+    print (idx)
+    read_dfs_results = open('./dfs/' + str(idx) + '.json', 'r')
+    dfs_results = json.load(read_dfs_results)
+    dfs_results_dict = {}
+    for cur in dfs_results:
+        for one_result in dfs_results[cur]:
+            path = "+".join(one_result["path_vlstr"])
+            # print (path)
+            score = sum(one_result["path_scores"]) / len(one_result["path_scores"])
+            dfs_results_dict[path] = score
+    print (len(dfs_results_dict))
+    dfs_results_ranked = sorted(dfs_results_dict, key=dfs_results_dict.get)
+    print (len(dfs_results_ranked))
+    dfs_results_trim = dfs_results_ranked[:20]
+    dfsPathRankedFinal = []
+    for dfs_res in dfs_results_trim:
+        dfs_one_path = []
+        dfs_res_split = dfs_res.split('+')
+        for ln_vlstr in dfs_res_split:
+            temp = {}
+            ln_vljson = get_vl_from_vlStr(ln_vlstr)
+            temp[ln_vlstr] = ln_vljson
+            dfs_one_path.append(temp)
+        dfsPathRankedFinal.append(dfs_one_path)
+
+    return jsonify(status="success", recVegalite=dfsPathRankedFinal)
 
 # helper methods:
 def get_vlStr_from_vl(chart_vegalite):

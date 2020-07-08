@@ -18,11 +18,13 @@ body {
 /* Control the left side */
 .left {
   left: 220px;
+  background-color: lightblue;
 }
 
 /* Control the right side */
 .right {
   right: 40px;
+  background-color: lightyellow;
 }
 
 /* If you want the content centered horizontally and vertically */
@@ -249,6 +251,12 @@ h5 {
   border-left: solid 3px rgb(175, 126, 231);
   padding: 10px 0 10px 10px;
   margin-top: 30px;
+  background-color: rgba(209, 197, 231, 0.699);
+}
+
+h4 {
+  border-left: solid 3px rgb(175, 126, 231);
+  padding: 10px 0 10px 10px;
   background-color: rgba(209, 197, 231, 0.699);
 }
 
