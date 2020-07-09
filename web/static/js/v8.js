@@ -12,6 +12,11 @@ $(document).ready(function () {
     // in our CSS
     $("a[aria-expanded=true]").attr("aria-expanded", "false");
   });
+
+  $("#resetFields").on("click", function () {
+    resetFields();
+    generateInitRecPlots();
+  });
 });
 
 var dataurl = "data/movies.json";
@@ -153,6 +158,7 @@ function generateInitRecPlots() {
     success: function (response) {
       console.log(response);
       relatedImg.innerHTML = "";
+      mainImg.innerHTML = "";
       bfsRec = response.recVegalite;
       // console.log(bfsRec);
       for (var i = 0; i < bfsRec.length; i++) {
@@ -446,4 +452,12 @@ function reassignFields(vljson) {
     }
   }
   checkedFields = fields;
+}
+
+function resetFields() {
+  let all_boxes = document.querySelectorAll(".form-check-input");
+
+  for (box of all_boxes) {
+    box.checked = false;
+  }
 }
