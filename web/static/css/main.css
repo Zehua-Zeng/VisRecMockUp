@@ -52,8 +52,8 @@ hr.dashed {
 }
 
 .back_to_index {
-  float: left !important;
-  padding-left: 60vw !important;
+  float: right !important;
+  padding-left: 50vw !important;
 }
 
 .back_to_index a {
@@ -83,6 +83,10 @@ hr.dashed {
 }
 
 #bookmark {
+  margin: 15px 0 10px 20px;
+}
+
+#sidebarCollapse {
   margin: 15px 0 10px 20px;
 }
 
@@ -146,7 +150,7 @@ hr.dashed {
 
 /* ============== sideNav#1 styling =============== */
 #sidebar1 {
-  display: inline-block;
+  /* display: inline-block; */
   margin-top: 7.8vh;
   background-color: rgb(96, 96, 138);
   box-shadow: 0 0 7px rgba(54, 44, 73, 0.877);
@@ -154,10 +158,19 @@ hr.dashed {
   height: 94%;
   min-height: 750px;
   position: fixed;
-  z-index: 10;
+  /* z-index: 10; */
   color: white;
   padding: 10px;
   font-size: 12px;
+  /* added: */
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+  z-index: 999;
+}
+
+#sidebar1.active {
+  margin-left: -210px;
 }
 
 #sidebar1 .sidebar-fields {
@@ -386,21 +399,4 @@ h4 {
 
 #index a {
   color: rgb(38, 0, 128);
-}
-
-.back_to_index {
-  float: left !important;
-  padding-left: 60vw !important;
-}
-
-.back_to_index a {
-  color: rgb(52, 31, 172) !important;
-  font-weight: bold;
-  background-color: rgb(187, 195, 241);
-  padding: 12px !important;
-  border-radius: 5px;
-}
-
-.back_to_index a:hover {
-  background-color: rgb(170, 179, 231);
 }

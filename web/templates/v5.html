@@ -15,6 +15,11 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/main.css" />
+    <!-- Scrollbar Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+    />
     <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       type="text/javascript"
@@ -59,6 +64,16 @@
               <i class="fas fa-bookmark"></i> &nbsp; Bookmarks
             </button>
           </li>
+          <li class="nav-item active">
+            <button
+              type="button"
+              id="sidebarCollapse"
+              class="btn btn-sm btn-outline-secondary"
+            >
+              <i class="fas fa-align-left"></i>
+              <span>Toggle Sidebar</span>
+            </button>
+          </li>
           <li class="nav-item active back_to_index">
             <a class="nav-link" href="/"
               ><i class="fas fa-undo-alt"></i> &nbsp; Return to Index
@@ -80,7 +95,7 @@
     <main>
       <div class="wrapper">
         <!-- =========== Sidebar ============ -->
-        <nav id="sidebar1">
+        <nav id="sidebar1" class="active">
           <!-- (1) Sidebar data -->
           <div class="sidebar-datablock">
             <h6>Data</h6>
@@ -184,5 +199,7 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
   </body>
 </html>

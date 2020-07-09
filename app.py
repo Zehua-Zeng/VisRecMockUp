@@ -68,6 +68,10 @@ def v6():
 def v7():
     return render_template("v7.html")
 
+@app.route('/v8')
+def v8():
+    return render_template('v8.html')
+
 @app.route('/test')
 def test():
     return render_template('test.html')
